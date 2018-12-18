@@ -6,11 +6,11 @@ import {
     REQUEST_IMAGES
 } from "app/utils/constants";
 
-export const loadImages = (query, page, previouslyLoaded) => {
+export const loadImages = (query, page, previouslyLoaded, initialLoad = false) => {
     return async (dispatch) => {
         dispatch({ type: REQUEST_IMAGES, loading: true });
         const results = await unsplashRequest(query, page),
-            notFound = results.length === 0;
+            notFound = initialLoad && results.length === 0;
 
         dispatch({
             type: RECEIVE_IMAGES,
@@ -24,6 +24,6 @@ export const loadImages = (query, page, previouslyLoaded) => {
 export const initialLoad = (query) => {
     return (dispatch) => {
         dispatch({ type: CLEAR_IMAGES, data: [], notFound: false });
-        dispatch(loadImages(query, 1, []));
+        dispatch(loadImages(query, 1, [], true));
     };
 };
