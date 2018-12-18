@@ -16,7 +16,6 @@ module.exports = {
     },
     output: {
         path: outPath,
-        publicPath: '/',
         filename: 'bundle.js',
         chunkFilename: '[chunkhash].js'
     },
@@ -33,12 +32,10 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                use: [
-                    !isProduction && {
-                        loader: 'babel-loader',
-                        options: {presets: ["@babel/preset-env", "@babel/preset-react"]}
-                    }
-                ].filter(Boolean)
+                use: [{
+                    loader: 'babel-loader',
+                    options: {presets: ["@babel/preset-env", "@babel/preset-react"]}
+                }].filter(Boolean)
             },
             {
                 test: /\.scss$/,
