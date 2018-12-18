@@ -3,5 +3,6 @@
   "save": "Save",
   "loading": "Loading",
   "load_more": "Load more",
-  "no_results_found": "Your search query did not return any results"
+  "no_results_found": "Your search query did not return any results",
+  "saved_queries": "Saved queries"
 }

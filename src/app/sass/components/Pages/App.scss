@@ -1,11 +1,12 @@
 @import '../../vars';
 
 .app {
+  padding-top: 5px;
   color: $font-color;
 
   [class*="col-"] {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   &__inline-buttons {
