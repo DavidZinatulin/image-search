@@ -1,0 +1,31 @@
+.image-grid {
+  text-align: center;
+  //position: relative;
+
+  &__scroll-container {
+    min-height: 100px;
+    max-height: 450px;
+    overflow-y: auto;
+  }
+
+  &__loader-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,.85);
+    opacity: .85;
+  }
+
+  &__button-container {
+    padding: 20px 0;
+  }
+
+  .card {
+    border: none;
+  }
+
+  img {
+    border-radius: 0;
+  }
+}

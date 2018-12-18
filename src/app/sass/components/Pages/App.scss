@@ -1,0 +1,42 @@
+@import '../../vars';
+
+.app {
+  color: $font-color;
+
+  [class*="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__inline-buttons {
+    display: flex;
+
+    .btn {
+      flex-grow: 1;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .loader {
+    display: inline-block;
+    border: 10px solid $font-color;
+    border-radius: 50%;
+    border-top: 10px solid transparent;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+}
