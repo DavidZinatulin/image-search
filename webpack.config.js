@@ -98,6 +98,8 @@ module.exports = {
             DEBUG: false
         }),
         new webpack.DefinePlugin({
+            'UNSPLASH_DOMAIN': JSON.stringify('https://unsplash.com'),
+            'APP_NAME': JSON.stringify('image-search'),
             'APP_ACCESS': JSON.stringify('85a50f15e68b34857485776e608edfe5c46c5369709f02fcfb3174d326299399'),
             'APP_SECRET': JSON.stringify('b9486f308cbac374f031ead01e993df5854b96de1374f74fd60e19ad82b8c599')
         }),

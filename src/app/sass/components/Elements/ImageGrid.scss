@@ -1,3 +1,5 @@
+@import '../../vars';
+
 .image-grid {
   text-align: center;
 
@@ -12,7 +14,7 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    background: rgba(255,255,255,.85);
+    background: rgba(255, 255, 255, .85);
     opacity: .85;
   }
 
@@ -20,8 +22,26 @@
     padding: 20px 0;
   }
 
+  &__reference-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    font-size: 11px;
+    width: 100%;
+    padding: 5px 0;
+    opacity: 0;
+    transition: opacity .1s;
+  }
+
   .card {
     border: none;
+    position: relative;
+    color: white;
+
+    &:hover .image-grid__reference-link {
+      opacity: 1;
+    }
   }
 
   img {

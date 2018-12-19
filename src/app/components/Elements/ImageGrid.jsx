@@ -28,6 +28,14 @@ const ImageGrid = ({ data, loading, notFound, loadMore }) => {
                 {data.map((item, key) => (
                     <div key={key} className="card">
                         <img src={item.urls.thumb} alt="" className="card-img-top"/>
+                        <a
+                            href={
+                                `${UNSPLASH_DOMAIN}/@${item.user.username}?utm_source=${APP_NAME}&utm_medium=referral`
+                            }
+                            className="image-grid__reference-link"
+                        >
+                            {item.user.name}
+                        </a>
                     </div>
                 ))}
             </div>
